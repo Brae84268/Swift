@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xLD-UL-2Ts">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--인덕대 근처 식당-->
+        <scene sceneID="WqF-KV-D4g">
+            <objects>
+                <tableViewController id="7A0-ay-woW" customClass="TableViewController" customModule="Brae" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="cRR-rI-VoE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.84277373060000005" green="0.98039215690000003" blue="0.95265113300000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" textLabel="kHR-6S-YS9" rowHeight="105" style="IBUITableViewCellStyleDefault" id="av5-PM-s9y">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="av5-PM-s9y" id="noz-jY-ZOU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kHR-6S-YS9">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95765379299999998" green="0.98039215690000003" blue="0.72663631709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="iV8-HA-FZi" kind="show" identifier="sgDetail" id="IVw-2h-u6F"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7A0-ay-woW" id="Ihi-QZ-I4y"/>
+                            <outlet property="delegate" destination="7A0-ay-woW" id="2Pq-Iq-GRX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="인덕대 근처 식당" largeTitleDisplayMode="always" id="2xH-et-Mug">
+                        <barButtonItem key="backBarButtonItem" title="뒤로가기" id="stf-DN-jWT"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tvListView" destination="cRR-rI-VoE" id="t8o-Os-zHS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kQ-lx-pP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510.14492753623193" y="-91.071428571428569"/>
+        </scene>
+        <!--Detail view-->
+        <scene sceneID="GsV-90-VOV">
+            <objects>
+                <viewController title="Detail view" id="iV8-HA-FZi" customClass="DetailViewController" customModule="Brae" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ej0-ey-QVm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6Q-1t-ioB">
+                                <rect key="frame" x="15" y="97" width="384" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6XQ-9I-Gvf">
+                                <rect key="frame" x="0.0" y="123.5" width="414" height="738.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zvJ-hG-dxx"/>
+                        <color key="backgroundColor" red="0.84277373060000005" green="0.98039215690000003" blue="0.95265113300000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6XQ-9I-Gvf" firstAttribute="leading" secondItem="zvJ-hG-dxx" secondAttribute="leading" id="4Jl-Ue-xTs"/>
+                            <constraint firstItem="6XQ-9I-Gvf" firstAttribute="top" secondItem="v6Q-1t-ioB" secondAttribute="bottom" id="4ak-KT-jcy"/>
+                            <constraint firstItem="v6Q-1t-ioB" firstAttribute="leading" secondItem="zvJ-hG-dxx" secondAttribute="leading" constant="15" id="OeB-YZ-FEv"/>
+                            <constraint firstItem="zvJ-hG-dxx" firstAttribute="bottom" secondItem="6XQ-9I-Gvf" secondAttribute="bottom" id="ckW-Di-QH1"/>
+                            <constraint firstItem="zvJ-hG-dxx" firstAttribute="trailing" secondItem="v6Q-1t-ioB" secondAttribute="trailing" constant="15" id="meP-TZ-nJC"/>
+                            <constraint firstItem="v6Q-1t-ioB" firstAttribute="top" secondItem="zvJ-hG-dxx" secondAttribute="top" constant="5" id="paN-7n-58f"/>
+                            <constraint firstItem="zvJ-hG-dxx" firstAttribute="trailing" secondItem="6XQ-9I-Gvf" secondAttribute="trailing" id="srD-cD-x7m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uav-Cw-Ck5"/>
+                    <connections>
+                        <outlet property="Web" destination="6XQ-9I-Gvf" id="VHE-jz-rKr"/>
+                        <outlet property="lblItem" destination="v6Q-1t-ioB" id="0pZ-fQ-lPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ouk-Uy-06V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273.913043478261" y="-91.071428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QU8-XB-ouq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xLD-UL-2Ts" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LBo-1I-6Lw">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7A0-ay-woW" kind="relationship" relationship="rootViewController" id="X1D-ay-JtR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfB-hs-Ucm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="-91"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
